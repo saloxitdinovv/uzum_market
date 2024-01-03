@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Uzum</title>
+    <link rel="stylesheet" href="style.scss">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+
+
+    <div class="mobile_header">
+        <div class="container">
+
+
+            <div class="first_floor">
+                <div class="first_floor_box">
+                    <img src="/public/uzum_logo.svg" alt="">
+                    <span>
+                        <p>Uzum Market</p>
+                        <p>Скачать приложение</p>
+                    </span>
+                </div>
+                <button class="download_uzum">
+                    Скачать
+                </button>
+            </div>
+
+            <div class="second_floor">
+                <span class="search_close">
+                    <button class="close_search_modal hide">
+                        <img src="/public/acardion.svg" alt="">
+                    </button>
+
+                    <div class="mobile_search">
+                        <span>
+                            <img src="/public/search.svg" alt="">
+                        </span>
+                        <input type="text" class="mobile_search_input" placeholder="Искать товары и категории">
+                        <button class="delete_search_input">
+                            <img src="/public/close.png" alt="">
+                        </button>
+                    </div>
+                </span>
+                <div class="mobile_search_modal hide">
+                    <h1>Популярное</h1>
+
+                    <div class="popular_search_modal_box"></div>
+
+                    <div class="found_items_box">
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="container no_goods">
+        <div class="no_goods_box">
+            <img src="https://uzum.uz/static/img/shopocat.490a4a1.png" alt="">
+
+            <h1>В корзине пока нет товаров</h1>
+            <p>Начните с подборок на главной странице или найдите нужный товар через поиск</p>
+
+            <button class="to_main">На главную</button>
+        </div>
+    </div>
+
+    <div class="box hidden_box">
+        <div class="container">
+            <h1 class="cart_amount_info">Ваша корзина, <span class="cart_amount"></span></h1>
+        </div>
+
+        <div class="cart_container">
+            <div class="container">
+
+                
+                <div class="cart_products">
+                    <div class="cart_products_head">
+                        <div class="cart_head_box">
+                        </div>
+
+                        <div class="cart_head_box">
+                            <p class="dost_info">Ближайшая дата доставки:</p>
+                            <div class="dost">30 декабря (Послезавтра)</div>
+                        </div>
+                    </div>
+
+                    <div class="hr"></div>
+
+                    <div class="cart_body">
+                        <div class="items">
+                            <div class="item">
+                                <div class="select">
+                                    <input type="checkbox" class="item_check">
+                                </div>
+
+                                <div class="item_photo">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div class="item_info">
+
+
+                                    <div class="item_name_del_item">
+
+                                        <p class="item_name">Умный робот пылесос Xiaomi Robot Vacuum E12 Global, с
+                                            функцией
+                                            сухой и влажной уборки</p>
+
+                                        <button class="del_item">
+                                            <img src="/public/bin.svg" alt="">
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+
+
+
+
+                                    <div class="item_price_counter">
+
+                                        <div class="options">
+                                            <p>Продавец: <span>UZUM MARKET</span></p>
+                                            <p>Цвет: <span class="item_color"></span></p>
+                                        </div>
+
+                                        <div class="counter_price">
+
+                                            <div class="counter_box">
+
+                                                <div class="amount_counter">
+                                                    <button class="minus opacity">
+                                                        <img src="/public/minus.png" alt="">
+                                                    </button>
+                                                    <p class="amount">1</p>
+                                                    <button class="plus">
+                                                        <img src="/public/plus.png" alt="">
+                                                    </button>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="prices">
+                                                <p class="item_discouted_price">2 209 000 сум</p>
+                                                <p class="item_price">3 898 000 сум</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cart_info">
+                    <div class="cart_sum">
+                        <p class="your">Ваш заказ</p>
+                        <div class="amount_price">
+                            <p class="amount_sum">Товары<span class="cart_amount_sum"></span>:</p>
+                            <p class="total_price"></p>
+                        </div>
+                        <div class="dostavka_info">Доставка <span></span></div>
+                        <div class="total_info">
+                            <p class="total_p">Итогo:</p>
+                            <p class="total"></p>
+                        </div>
+                        <p class="economy"></p>
+
+                        <button class="buy">Перейти к оформлению</button>
+                    </div>
+                    <div class="free">
+                        <p class="choose_one">Выберите хотя бы 1 товар</p>
+                        <p class="free_info">Отметьте товары, которые вы хотите оформить в один заказ</p>
+                        <div class="progress_bars">
+                            <div class="tventy_progress_box">
+                                <div class="progress_bar_twenty"></div>
+                            </div>
+                            <div class="milion_progress_box">
+                                <div class="progress_bar_milion"></div>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            <p>20 000 сум</p>
+                            <p>1 000 000 сум
+                                <img src="/public/home.svg" alt="">
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="registration_modal hidden_reg_modal">
+        <div class="bg"></div>
+        <div class="reg_content">
+            <button class="close">
+                <img src="/public/close.png" alt="">
+            </button>
+            <div class="sign_up">
+                <h1>Введите номер телефона</h1>
+                <p>Отправим смс с кодом подтверждения</p>
+                <form name="reg">
+                    <input type="tel" name="phone" placeholder="+998    00 000-00-00">
+                    <button class="send">Получить код</button>
+                </form>
+                <p class="rules">Авторизуясь, вы соглашаетесь c политикой <br> обработки персональных данных</p>
+            </div>
+
+
+            <div class="sign_in hidden_reg_modal">
+                <h1>Введите код</h1>
+                <p>Для подтверждения телефона отправили 5-значный код на <span class="reged_number"></span></p>
+                <input type="number" name="code" class="code_check send" placeholder="0     0     0     0     0">
+            </div>
+
+            <div class="profile hidden_reg_modal">
+                <h1>Заполните профиль</h1>
+                <form name="profile">
+                    <span>
+                        <input class="profile_inputs" type="text" name="name" placeholder="Ваше имя">
+                        <input class="profile_inputs" type="text" name="surname" placeholder="Ваша фамилия">
+                        <input type="tel" class="profile_inputs num_ready" name="phone" placeholder="+998 00 000 00 00">
+                    </span>
+                    <button class="send profile_btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+
+
+    <div class="second_footer">
+        <div class="container">
+            <div class="small_footer">
+
+
+                <div class="acardion" onclick="toggleAccordion(this)">
+                    <div class="acar_head">
+                        <p>О нас</p>
+                        <img src="/public/acardion.svg" alt="">
+                    </div>
+
+                    <div class="acar_body">
+                        <a href="#">Пункт выдачи</a>
+                        <a href="#">Вакансии</a>
+                    </div>
+                </div>
+
+
+
+                <div class="acardion" onclick="toggleAccordion(this)">
+                    <div class="acar_head">
+                        <p>Пользователям</p>
+                        <img src="/public/acardion.svg" alt="">
+                    </div>
+
+                    <div class="acar_body">
+                        <a href="#">Пункт выдачи</a>
+                        <a href="#">Вакансии</a>
+                    </div>
+                </div>
+
+                <div class="acardion" onclick="toggleAccordion(this)">
+                    <div class="acar_head">
+                        <p>Для предпринимателей</p>
+                        <img src="/public/acardion.svg" alt="">
+                    </div>
+
+                    <div class="acar_body">
+                        <a href="#">Пункт выдачи</a>
+                        <a href="#">Вакансии</a>
+                    </div>
+                </div>
+
+
+                <div class="download">
+                    <p>Скачать приложение</p>
+
+                    <div class="links">
+                        <img src="/public/apple_store_logo.svg" alt="">
+                        <img src="/public/google_play_logo.svg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="social_links">
+                    <p>Uzum в соцсетях</p>
+
+                    <div class="links_social">
+                        <a href="#">
+                            <img src="/public/instagram.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/public/telegram.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="/public/youtube.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="/public/facebook.svg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="ps">
+                    <p> Соглашение о конфиденциальности</p>
+                    <p> Пользовательское соглашение </p>
+                    <p> «2024© ООО «UZUM MARKET». ИНН 309376127. Все права защищены» </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="container">
+            <div class="nav_menu">
+                <div class="menu_main_page">
+                    <img src="/public/menu_main_page.png" alt="">
+                    <p class="nav_link">Главная</p>
+                </div>
+                <div class="menu_catalog">
+                    <img src="/public/nav_menu_catalog.svg" alt="">
+                    <p class="nav_link">Каталог</p>
+                </div>
+                <div class="market">
+                    <img src="/public/market.svg" alt="">
+                    <p class="nav_link">Корзина</p>
+                    <span class="products_in_cart">13</span>
+                </div>
+                <div class="nav_menu_loved">
+                    <img src="/public/menu_loved.svg" alt="">
+                    <p class="nav_link">Избранное </p>
+                </div>
+                <div class="menu_profile">
+                    <img src="/public/menu_profile.svg" alt="">
+                    <p class="nav_link">Кабинет</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+    <script src="/modules/footer.js"></script>
+    <script type="module" src="/modules/header.js"></script>
+
+    <script>
+        function toggleAccordion(accordion) {
+            const body = accordion.querySelector('.acar_body');
+            body.style.display = (body.style.display === 'none' || body.style.display === '') ? 'flex' : 'none';
+        }
+    </script>
+</body>
+
+</html>
