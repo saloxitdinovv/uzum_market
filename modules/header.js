@@ -561,11 +561,15 @@ function secondStep() {
 }
 
 
+let user_input = document.querySelectorAll('.user_input')
+
+let names_regex = /^[a-z ,.'-]+$/i
+
+
 profile_form.onsubmit = (e) => {
     e.preventDefault()
 
     let error = false
-
 
     profile_inputs.forEach(input => {
         if (input.value.length === 0) {
@@ -579,6 +583,22 @@ profile_form.onsubmit = (e) => {
             profile_button.style.background = '#7000FF'
         }
     })
+
+    user_input.forEach(input => {
+        let correct = names_regex.test(input.value)
+        if (input.value.length === 0 || correct === false) {
+            error = true
+            input.style.border = '2px solid red'
+            input.style.color = 'red'
+            profile_button.style.background = 'red'
+        } else {
+            input.style.border = 'none'
+            input.style.color = 'black'
+            profile_button.style.background = '#7000FF'
+        }
+    })
+
+
 
     if (error) {
         return error
