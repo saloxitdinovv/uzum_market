@@ -19,6 +19,8 @@ let modal_buy = document.querySelector('.modal_buy')
 
 let title = document.querySelector('title')
 
+let description = document.querySelector('.desc')
+
 
 let add_love = document.querySelector('.add_love')
 let heart_img = add_love.querySelector('img')
@@ -63,6 +65,7 @@ getData('/goods/' + id)
         let good = res
 
         product_name.innerHTML = good.title
+        description.innerHTML = good.description
         title.innerHTML = good.title
         rating.innerText = good.rating
         price.innerHTML = `${good.price} сум`

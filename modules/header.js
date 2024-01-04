@@ -612,3 +612,6 @@ function submit() {
 
     localStorage.setItem('user_id', JSON.stringify(user.name));
 }
+
+let products_in_cart = document.querySelector('.products_in_cart')
+products_in_cart.innerHTML = cart.length

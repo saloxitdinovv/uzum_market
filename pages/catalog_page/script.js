@@ -1,3 +1,24 @@
+import { getData } from "../../modules/http"
+import { reload_categories } from "../../modules/reloads"
+
+let categories = []
+let catalog_box = document.querySelector('.catalog_box')
+
+getData('/goods')
+    .then(res => {
+        let goods = res
+        goods.filter(good => {
+            let category = good.type
+            categories.push(category)
+        })
+        let counts = categories.reduce((acc, item) => {
+            acc[item] = (acc[item] || 0) + 1;
+            return acc;
+        }, {});
+        reload_categories(counts, catalog_box)
+    })
+
+
 
 
 
@@ -9,7 +30,7 @@ menu_main_page.onclick = () => {
 let menu_catalog = document.querySelector('.menu_catalog')
 
 menu_catalog.onclick = () => {
-    location.assign('/pages/catalog/')
+    location.assign('/pages/catalog_page/')
 }
 
 let market = document.querySelector('.market')
@@ -25,23 +46,10 @@ nav_menu_loved.onclick = () => {
 }
 
 
-let registration_modal = document.querySelector('.registration_modal')
-let bg = registration_modal.querySelector('.bg')
-let close_reg = registration_modal.querySelector('.close')
-let body = document.body
-let menu_profile = document.querySelector('.menu_profile')
+let cart_main = JSON.parse(localStorage.getItem('cart')) || [];
+let uniqueCart = new Set(cart_main.map(JSON.stringify));
+let cart = Array.from(uniqueCart).map(JSON.parse);
 
-menu_profile.onclick = () => {
-    registration_modal.classList.remove('hidden_reg_modal')
-    body.style.overflow = 'hidden'
-}
 
-bg.onclick = () => {
-    registration_modal.classList.add('hidden_reg_modal')
-    body.style.overflowY = 'scroll'
-}
-
-close_reg.onclick = () => {
-    registration_modal.classList.add('hidden_reg_modal')
-    body.style.overflowY = 'scroll'
-}
+let products_in_cart = document.querySelector('.products_in_cart')
+products_in_cart.innerHTML = cart.length
