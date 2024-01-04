@@ -101,7 +101,7 @@ main_logo.onclick = () => {
 
 let logo_img = document.createElement('img')
 logo_img.alt = 'main_logo'
-logo_img.src = '../public/uzum_logo.png'
+logo_img.src = '././public/uzum_logo.png'
 main_logo.append(logo_img)
 
 
