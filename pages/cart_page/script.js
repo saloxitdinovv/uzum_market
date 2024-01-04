@@ -109,7 +109,7 @@ function reload_cart_items(arr, place) {
         del_item.classList.add('del_item')
 
         let del_img = document.createElement('img')
-        del_img.src = '/public/bin.svg'
+        del_img.src = '/bin.svg'
         del_img.alt = 'delete'
 
         let del_span = document.createElement('span')
@@ -165,7 +165,7 @@ function reload_cart_items(arr, place) {
 
 
         let minus_img = document.createElement('img')
-        minus_img.src = '/public/minus.png'
+        minus_img.src = '/minus.png'
 
         minus.append(minus_img)
 
@@ -180,7 +180,7 @@ function reload_cart_items(arr, place) {
 
 
         let plus_img = document.createElement('img')
-        plus_img.src = '/public/plus.png'
+        plus_img.src = '/plus.png'
 
         plus.append(plus_img)
 
@@ -493,7 +493,7 @@ function reload_founded_results(arr, place) {
         let resultItem = document.createElement('div');
         let result = document.createElement('p');
         let icon = document.createElement('img');
-        icon.src = '/public/search.svg'
+        icon.src = '/search.svg'
         resultItem.classList.add('found')
 
         result.innerHTML = highlightMatch(item.title, search_input.value);
