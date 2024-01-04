@@ -36,7 +36,7 @@ let location_box = document.createElement('div')
 location_box.classList.add('location')
 let location_box_img = document.createElement('img')
 location_box_img.alt = 'Location'
-location_box_img.src = '/public/location.svg'
+location_box_img.src = './public/location.svg'
 location_box.innerText = 'Город:'
 let location_span = document.createElement('span')
 location_span.innerHTML = 'Ташкент'
