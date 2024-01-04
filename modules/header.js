@@ -36,7 +36,7 @@ let location_box = document.createElement('div')
 location_box.classList.add('location')
 let location_box_img = document.createElement('img')
 location_box_img.alt = 'Location'
-location_box_img.src = './public/location.svg'
+location_box_img.src = '/location.svg'
 location_box.innerText = 'Город:'
 let location_span = document.createElement('span')
 location_span.innerHTML = 'Ташкент'
@@ -67,7 +67,7 @@ let language_box = document.createElement('div')
 language_box.classList.add('language')
 let language_img = document.createElement('img')
 language_img.alt = 'language'
-language_img.src = './public/language.svg'
+language_img.src = '/public/language.svg'
 language_box.innerHTML = 'Русский'
 language_box.prepend(language_img)
 
@@ -101,7 +101,7 @@ main_logo.onclick = () => {
 
 let logo_img = document.createElement('img')
 logo_img.alt = 'main_logo'
-logo_img.src = '/dist/assets/uzum_logo.png'
+logo_img.src = '/public/uzum_logo.png'
 main_logo.append(logo_img)
 
 
