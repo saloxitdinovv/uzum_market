@@ -67,7 +67,7 @@ let language_box = document.createElement('div')
 language_box.classList.add('language')
 let language_img = document.createElement('img')
 language_img.alt = 'language'
-language_img.src = '/public/language.svg'
+language_img.src = '/language.svg'
 language_box.innerHTML = 'Русский'
 language_box.prepend(language_img)
 
@@ -101,7 +101,7 @@ main_logo.onclick = () => {
 
 let logo_img = document.createElement('img')
 logo_img.alt = 'main_logo'
-logo_img.src = '/public/uzum_logo.png'
+logo_img.src = '/uzum_logo.png'
 main_logo.append(logo_img)
 
 
@@ -140,7 +140,7 @@ let btn_del = document.createElement('button')
 btn_del.classList.add('del_all')
 let del_img = document.createElement('img')
 del_img.alt = 'delete'
-del_img.src = '/public/close.png'
+del_img.src = '/close.png'
 
 btn_del.append(del_img)
 
@@ -148,7 +148,7 @@ let search_btn = document.createElement('button')
 search_btn.classList.add('search_btn')
 let search_img = document.createElement('img')
 search_img.alt = 'search'
-search_img.src = '/public/search.svg'
+search_img.src = '/search.svg'
 
 search_btn.append(search_img)
 
@@ -174,7 +174,7 @@ main_head_buttons.classList.add('main_head_buttons')
 let btn_1 = document.createElement('button')
 btn_1.classList.add('log_in')
 let btn_1_img = document.createElement('img')
-btn_1_img.src = '/public/log.svg'
+btn_1_img.src = '/log.svg'
 btn_1_img.alt = 'log_in'
 let btn_1_span = document.createElement('span')
 if (local_user.length === 0) {
@@ -210,7 +210,7 @@ close.onclick = () => {
 let btn_2 = document.createElement('button')
 btn_2.classList.add('log_in')
 let btn_2_img = document.createElement('img')
-btn_2_img.src = '/public/loved.svg'
+btn_2_img.src = '/loved.svg'
 btn_2_img.alt = 'log_in'
 let btn_2_span = document.createElement('span')
 btn_2_span.innerHTML = 'Избранное'
@@ -224,7 +224,7 @@ btn_2.onclick = () => {
 let btn_3 = document.createElement('button')
 btn_3.classList.add('log_in')
 let btn_3_img = document.createElement('img')
-btn_3_img.src = '/public/korzina.svg'
+btn_3_img.src = '/korzina.svg'
 btn_3_img.alt = 'log_in'
 let btn_3_span = document.createElement('span')
 btn_3_span.innerHTML = 'Корзина'
@@ -311,7 +311,7 @@ union.classList.add('union')
 
 let union_img = document.createElement('img')
 union_img.alt = 'union'
-union_img.src = '/public/union.png'
+union_img.src = '/union.png'
 
 let union_span = document.createElement('span')
 union_span.innerHTML = 'Рассрочка'
@@ -341,7 +341,7 @@ export function reload_results(arr, place) {
         let resultItem = document.createElement('div');
         let result = document.createElement('p');
         let icon = document.createElement('img');
-        icon.src = '/public/search.svg'
+        icon.src = '/search.svg'
         resultItem.classList.add('found')
 
         result.innerHTML = highlightMatch(item.title, search_input.value);
