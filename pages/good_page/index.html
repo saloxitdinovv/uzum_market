@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="/public/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.css" />
 </head>
 
 <body>
@@ -80,7 +81,9 @@
                                 <img src="/public/prev.svg" alt="">
                             </button>
                             <div class="slider">
-                                <img src="" alt="" class="main" id="mainImage">
+                                <div class="f-panzoom" id="myPanzoom">
+                                    <img src="" alt="" class="main f-panzoom__content" id="mainImage">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -157,6 +160,11 @@
 
                     </div>
                 </div>
+            </div>
+
+            <div class="desctiption">
+                <h1>Описание товара</h1>
+                <p class="desc"></p>
             </div>
         </div>
     </div>
@@ -332,11 +340,12 @@
             </div>
         </div>
     </div>
-    
 
     <script type="module" src="script.js"></script>
     <script src="/modules/footer.js"></script>
     <script type="module" src="/modules/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.umd.js"></script>
 
     <script>
         function toggleAccordion(accordion) {

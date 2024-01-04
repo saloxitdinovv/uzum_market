@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Uzum</title>
+    <link rel="stylesheet" href="style.scss">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="mobile_header">
+        <div class="container">
+
+
+            <div class="first_floor">
+                <div class="first_floor_box">
+                    <img src="/public/uzum_logo.svg" alt="">
+                    <span>
+                        <p>Uzum Market</p>
+                        <p>Скачать приложение</p>
+                    </span>
+                </div>
+                <button class="download_uzum">
+                    Скачать
+                </button>
+            </div>
+
+            <div class="second_floor">
+                <span class="search_close">
+                    <button class="close_search_modal hide">
+                        <img src="/public/acardion.svg" alt="">
+                    </button>
+
+                    <div class="mobile_search">
+                        <span>
+                            <img src="/public/search.svg" alt="">
+                        </span>
+                        <input type="text" class="mobile_search_input" placeholder="Искать товары и категории">
+                        <button class="delete_search_input">
+                            <img src="/public/close.png" alt="">
+                        </button>
+                    </div>
+                </span>
+                <div class="mobile_search_modal hide">
+                    <h1>Популярное</h1>
+
+                    <div class="popular_search_modal_box"></div>
+
+                    <div class="found_items_box">
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="catalog_box">
+        
+    </div>
+
+
+
+
+    <div class="second_footer">
+        <div class="container">
+            <div class="small_footer">
+
+
+                <div class="acardion" onclick="toggleAccordion(this)">
+                    <div class="acar_head">
+                        <p>О нас</p>
+                        <img src="/public/acardion.svg" alt="">
+                    </div>
+
+                    <div class="acar_body">
+                        <a href="#">Пункт выдачи</a>
+                        <a href="#">Вакансии</a>
+                    </div>
+                </div>
+
+
+
+                <div class="acardion" onclick="toggleAccordion(this)">
+                    <div class="acar_head">
+                        <p>Пользователям</p>
+                        <img src="/public/acardion.svg" alt="">
+                    </div>
+
+                    <div class="acar_body">
+                        <a href="#">Пункт выдачи</a>
+                        <a href="#">Вакансии</a>
+                    </div>
+                </div>
+
+                <div class="acardion" onclick="toggleAccordion(this)">
+                    <div class="acar_head">
+                        <p>Для предпринимателей</p>
+                        <img src="/public/acardion.svg" alt="">
+                    </div>
+
+                    <div class="acar_body">
+                        <a href="#">Пункт выдачи</a>
+                        <a href="#">Вакансии</a>
+                    </div>
+                </div>
+
+
+                <div class="download">
+                    <p>Скачать приложение</p>
+
+                    <div class="links">
+                        <img src="/public/apple_store_logo.svg" alt="">
+                        <img src="/public/google_play_logo.svg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="social_links">
+                    <p>Uzum в соцсетях</p>
+
+                    <div class="links_social">
+                        <a href="#">
+                            <img src="/public/instagram.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/public/telegram.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="/public/youtube.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="/public/facebook.svg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="ps">
+                    <p> Соглашение о конфиденциальности</p>
+                    <p> Пользовательское соглашение </p>
+                    <p> «2024© ООО «UZUM MARKET». ИНН 309376127. Все права защищены» </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="container">
+            <div class="nav_menu">
+                <div class="menu_main_page">
+                    <img src="/public/menu_main_page.png" alt="">
+                    <p class="nav_link">Главная</p>
+                </div>
+                <div class="menu_catalog">
+                    <img src="/public/nav_menu_catalog.svg" alt="">
+                    <p class="nav_link">Каталог</p>
+                </div>
+                <div class="market">
+                    <img src="/public/market.svg" alt="">
+                    <p class="nav_link">Корзина</p>
+                    <span class="products_in_cart">13</span>
+                </div>
+                <div class="nav_menu_loved">
+                    <img src="/public/menu_loved.svg" alt="">
+                    <p class="nav_link">Избранное </p>
+                </div>
+                <div class="menu_profile">
+                    <img src="/public/menu_profile.svg" alt="">
+                    <p class="nav_link">Кабинет</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+
+    <script>
+        function toggleAccordion(accordion) {
+            const body = accordion.querySelector('.acar_body');
+            body.style.display = (body.style.display === 'none' || body.style.display === '') ? 'flex' : 'none';
+        }
+    </script>
+</body>
+
+</html>

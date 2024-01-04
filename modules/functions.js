@@ -53,7 +53,6 @@ export function initializeSlider(images) {
     let nextButton = document.querySelector('.next');
     let prevButton = document.querySelector('.prev');
 
-
     for (let i = 0; i < images.length; i++) {
         let img = createImage(images[i], 'photo');
         img.onclick = function () {

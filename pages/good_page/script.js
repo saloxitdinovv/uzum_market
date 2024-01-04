@@ -15,9 +15,12 @@ let add = document.querySelector('.plus')
 let remove = document.querySelector('.minus')
 let amount = document.querySelector('.amount')
 let buy_button = document.querySelector('.add_to_cart')
+let buy = document.querySelector('.buy')
 let modal_buy = document.querySelector('.modal_buy')
 
 let title = document.querySelector('title')
+
+let description = document.querySelector('.desc')
 
 
 let add_love = document.querySelector('.add_love')
@@ -63,6 +66,7 @@ getData('/goods/' + id)
         let good = res
 
         product_name.innerHTML = good.title
+        description.innerHTML = good.description
         title.innerHTML = good.title
         rating.innerText = good.rating
         price.innerHTML = `${good.price} сум`
@@ -139,6 +143,30 @@ getData('/goods/' + id)
             }, 3800);
             updateCart()
         }
+
+        buy.onclick = () => {
+            modal_buy.style.display = 'flex'
+            addToCart(good)
+            setTimeout(() => {
+                modal_buy.classList.add('show');
+            }, 500);
+
+            let product_img = document.querySelector('.modal_img')
+            product_img.src = good.media[0]
+            product_img.alt = good.title
+
+            let modal_name = document.querySelector('.modal_name')
+            modal_name.innerHTML = good.title
+
+            setTimeout(() => {
+                modal_buy.classList.remove('show');
+            }, 3500);
+            setTimeout(() => {
+                modal_buy.style.display = 'none'
+            }, 3800);
+            updateCart()
+        }
+
     })
 
 let close = document.querySelector('.close')
@@ -300,3 +328,9 @@ close_reg.onclick = () => {
     registration_modal.classList.add('hidden_reg_modal')
     body.style.overflowY = 'scroll'
 }
+
+
+const container = document.getElementById("myPanzoom");
+const options = { click: "toggleCover" };
+
+new Panzoom(container, options);
