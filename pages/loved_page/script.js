@@ -8,6 +8,17 @@ let loved = JSON.parse(localStorage.getItem('liked')) || []
 let close = document.querySelector('.close')
 let modal_buy = document.querySelector('.modal_buy')
 
+let loved_none = document.querySelector('.loved_none')
+let body_content = document.querySelector('.body_content')
+
+if(loved.length > 0) {
+    loved_none.style.display = 'none'
+    body_content.style.display = 'block'
+} else {
+    loved_none.style.display = 'flex'
+    body_content.style.display = 'none'
+}
+
 getData('/goods')
     .then(res => {
         let goods = res
@@ -183,4 +194,10 @@ bg.onclick = () => {
 close_reg.onclick = () => {
     registration_modal.classList.add('hidden_reg_modal')
     body.style.overflowY = 'scroll'
+}
+
+
+let to_main = document.querySelector('.to_main')
+to_main.onclick = () => {
+    location.assign('/')
 }
