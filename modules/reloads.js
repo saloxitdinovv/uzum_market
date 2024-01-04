@@ -62,9 +62,9 @@ export function reload(arr, place) {
 
         product_img.src = item.media[0]
 
-        heart_img.src = '/public/heart.svg'
-        star.src = '/public/star.svg'
-        buy_icon.src = '/public/buy.svg'
+        heart_img.src = '/heart.svg'
+        star.src = '/star.svg'
+        buy_icon.src = '/buy.svg'
 
         blackFriday.innerHTML = 'Черная пятница'
 
@@ -86,7 +86,7 @@ export function reload(arr, place) {
             if (itemIndex === -1) {
                 likedArray.push(item.id);
 
-                heart_img.src = '/public/heart_filled.svg';
+                heart_img.src = '/heart_filled.svg';
                 heart_img.style.width = '25px'
                 heart_img.style.height = '25x'
                 heart_img.style.scale = '1.2'
@@ -96,14 +96,14 @@ export function reload(arr, place) {
             } else {
                 likedArray.splice(itemIndex, 1);
 
-                heart_img.src = '/public/heart.svg';
+                heart_img.src = '/heart.svg';
             }
 
             localStorage.setItem('liked', JSON.stringify(likedArray));
         }
 
         if (likedArray.includes(item.id)) {
-            heart_img.src = '/public/heart_filled.svg';
+            heart_img.src = '/heart_filled.svg';
             heart_img.style.width = '25px'
             heart_img.style.height = '25x'
         }
@@ -233,7 +233,7 @@ export function reload_cart_products(arr, place) {
 
         let delete_cart_img = document.createElement('img')
         delete_cart_img.classList.add('delete_cart_img')
-        delete_cart_img.src = '/public/bin.png'
+        delete_cart_img.src = '/bin.png'
         delete_cart_img.alt = 'bin'
 
         delete_from_cart.append(delete_cart_img)
@@ -339,7 +339,7 @@ export function reload_colors(arr, place) {
 
         let color_active = document.createElement('img');
         color_active.classList.add('color_active');
-        color_active.src = '/public/tick.png';
+        color_active.src = '/tick.png';
 
         color_round.append(color_active);
 
@@ -383,7 +383,7 @@ export function reloadRandomSearch(arr, place) {
         popular_item.classList.add('popular_item')
 
         let img = document.createElement('img')
-        img.src = "/public/search.svg"
+        img.src = "/search.svg"
         img.alt = 'search_icon'
 
         let item_name = document.createElement('p')

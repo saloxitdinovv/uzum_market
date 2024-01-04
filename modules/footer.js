@@ -63,13 +63,13 @@ links[7].classList.add('cg_body_div')
 
 let apple_img = document.createElement('img')
 apple_img.alt = 'apple'
-apple_img.src = '/public/apple-logo.png'
+apple_img.src = '/apple-logo.png'
 apple_img.classList.add('store_icon')
 links[6].prepend(apple_img)
 
 let google_play = document.createElement('img')
 google_play.alt = 'google play'
-google_play.src = '/public/google-play.png'
+google_play.src = '/google-play.png'
 google_play.classList.add('store_icon')
 links[7].prepend(google_play)
 
@@ -106,10 +106,10 @@ for (let i = 0; i < 4; i++) {
     imgs.push(img)
 }
 
-imgs[0].src = '/public/instagram.svg'
-imgs[1].src = '/public/telegram.svg'
-imgs[2].src = '/public/youtube.svg'
-imgs[3].src = '/public/facebook.svg'
+imgs[0].src = '/instagram.svg'
+imgs[1].src = '/telegram.svg'
+imgs[2].src = '/youtube.svg'
+imgs[3].src = '/facebook.svg'
 footer_body_boxes[3].append(foot_body_p, social)
 
 
