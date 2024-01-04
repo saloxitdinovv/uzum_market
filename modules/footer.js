@@ -89,6 +89,8 @@ foot_body_p.classList.add('foot_body_p')
 let social = document.createElement('div')
 social.classList.add('social')
 
+let hyperLinks = []
+
 let imgs = []
 for (let i = 0; i < 4; i++) {
     let footer_body_box = document.createElement('div')
@@ -97,7 +99,8 @@ for (let i = 0; i < 4; i++) {
     footer_body_boxes.push(footer_body_box)
 
     let link = document.createElement('a')
-    link.href = '#'
+    link.href = ''
+    hyperLinks.push(link)
     social.append(link)
 
     let img = document.createElement('img')
@@ -105,6 +108,11 @@ for (let i = 0; i < 4; i++) {
     link.append(img)
     imgs.push(img)
 }
+
+hyperLinks[0].href = 'https://uzum-by-doni.netlify.app/'
+hyperLinks[1].href = 'https://t.me/uzum_market'
+hyperLinks[2].href = 'https://www.youtube.com/channel/UCY3nNF2MUDKHrELA6LzbnHA'
+hyperLinks[3].href = 'https://www.facebook.com/uzummarket'
 
 imgs[0].src = '/instagram.svg'
 imgs[1].src = '/telegram.svg'
