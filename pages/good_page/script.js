@@ -54,7 +54,7 @@ add_love.onclick = () => {
 }
 
 if (likedArray.includes(product_id)) {
-    heart_img.src = '/public/heart_filled.svg';
+    heart_img.src = '/heart_filled.svg';
     heart_img.style.width = '25px'
     heart_img.style.height = '25x'
 }
@@ -292,7 +292,7 @@ menu_main_page.onclick = () => {
 let menu_catalog = document.querySelector('.menu_catalog')
 
 menu_catalog.onclick = () => {
-    location.assign('/pages/catalog/')
+    location.assign('/pages/catalog_page/')
 }
 
 let market = document.querySelector('.market')

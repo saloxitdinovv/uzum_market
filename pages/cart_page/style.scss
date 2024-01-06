@@ -758,7 +758,7 @@ footer {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.474);
         width: 100%;
-        z-index: 999;
+        z-index: 1000;
     }
 
     .reg_content {
@@ -1395,6 +1395,7 @@ footer {
     flex-direction: column;
     gap: 25px;
     padding-bottom: 100px;
+    text-align: center;
 
     img {
         width: 150px;
@@ -1794,6 +1795,25 @@ body.modal-open {
 
 @media (max-width: 768px) {
 
+    .nav_menu {
+        div {
+            color: #7000FF;
+            font-family: Inter;
+            font-size: 10.5px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 12px;
+            filter: grayscale(1);
+            opacity: 0.7;
+        }
+
+        div:nth-child(3) {
+            filter: none;
+            opacity: 1;
+        }
+    }
+
+
     .cart_container .container {
         display: flex;
         flex-direction: column-reverse;
@@ -2067,12 +2087,22 @@ body.modal-open {
 
     .nav_menu {
         div {
+
             img {
-                width: 25px;
+                width: 35px;
+                height: 35px;
+                object-fit: cover;
             }
 
             p {
                 font-size: 13px;
+            }
+        }
+
+        div:nth-child(4) {
+            img {
+                width: 30px;
+                object-fit: contain;
             }
         }
     }

@@ -515,7 +515,7 @@ menu_main_page.onclick = () => {
 let menu_catalog = document.querySelector('.menu_catalog')
 
 menu_catalog.onclick = () => {
-    location.assign('/pages/catalog/')
+    location.assign('/pages/catalog_page/')
 }
 
 let market = document.querySelector('.market')

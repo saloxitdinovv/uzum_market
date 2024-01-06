@@ -249,3 +249,20 @@ close_reg.onclick = () => {
     registration_modal.classList.add('hidden_reg_modal')
     body.style.overflowY = 'scroll'
 }
+
+let aside = document.querySelector('aside')
+let filters_button = document.querySelector('.filters')
+let open = false
+
+
+filters_button.onclick = () => {
+    if(open) {
+        aside.style.display = 'none'
+        document.body.classList.remove('modal-open');
+    } else {
+        aside.style.display = 'block'
+        document.body.classList.add('modal-open');
+    }
+
+    open = !open
+}
