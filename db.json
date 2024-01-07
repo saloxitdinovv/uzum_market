@@ -945,58 +945,26 @@
   ],
   "users": [
     {
-      "name": "Saloxitdinov",
-      "surname": "saloxitdinc",
+      "name": "Дониёр",
+      "surname": "Салохитдинов",
       "phone": "+998979273579",
-      "id": 1
+      "id": 1,
+      "sur_name": "Зокирович",
+      "email": ""
     },
     {
-      "name": "doni",
-      "surname": "asas",
-      "phone": "+998979273571",
+      "name": "ррараа",
+      "surname": "аоаоао",
+      "phone": "+998979373579",
       "id": 2
     },
     {
-      "name": "asasas",
-      "surname": "123",
-      "phone": "+998979273572",
-      "id": 3
-    },
-    {
-      "name": "1212",
-      "surname": "1",
-      "phone": "+998979273573",
-      "id": 4
-    },
-    {
-      "name": "doni",
-      "surname": "saloxitdinov",
-      "phone": "+998979273574",
-      "id": 5
-    },
-    {
       "name": "Saloxitdinov",
-      "surname": "asas",
-      "phone": "+998979273525",
-      "id": 6
-    },
-    {
-      "name": "12",
-      "surname": "12",
-      "phone": "+998919273579",
-      "id": 7
-    },
-    {
-      "name": "doni",
       "surname": "saloxitdinov",
-      "phone": "+998979273511",
-      "id": 8
-    },
-    {
-      "name": "max",
-      "surname": "s",
-      "phone": "+998979273522",
-      "id": 9
+      "phone": "+998979273571",
+      "id": 3,
+      "sur_name": "Зокирович",
+      "email": "doniyoroffvv@gmail.com"
     }
   ]
 }

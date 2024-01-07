@@ -180,8 +180,9 @@ let btn_1_span = document.createElement('span')
 if (local_user.length === 0) {
     btn_1_span.innerHTML = 'Войти'
 } else {
-    btn_1_span.innerHTML = `${local_user.substring(0, 6)}...`
+    btn_1_span.innerHTML = `${local_user.substring(0, 6)}`
 }
+
 btn_1_span.classList.add('profile_name')
 btn_1.append(btn_1_img, btn_1_span)
 
@@ -192,9 +193,14 @@ let body = document.body
 
 
 btn_1.onclick = () => {
-    registration_modal.classList.remove('hidden_reg_modal')
-    body.style.overflow = 'hidden'
+    if (btn_1_span.innerHTML === 'Войти') {
+        registration_modal.classList.remove('hidden_reg_modal')
+        body.style.overflow = 'hidden'
+    } else {
+        location.assign('/pages/profile_page/')
+    }
 }
+
 
 bg.onclick = () => {
     registration_modal.classList.add('hidden_reg_modal')
@@ -335,7 +341,7 @@ export function displayRandomProductTitles(products) {
 }
 
 
-export function reload_results(arr, place) { 
+export function reload_results(arr, place) {
     place.innerHTML = ''
     for (let item of arr) {
         let resultItem = document.createElement('div');
@@ -480,7 +486,7 @@ let form_input = form.querySelector('input')
 let form_button = form.querySelector('button')
 let regex = /^\+998([- ])?(90|91|93|94|95|98|99|33|97|71)?(\d{3})([- ])?(\d{2})([- ])?(\d{2})$/
 
-let name_regex = /^[A-Za-z\s]+$/
+let names_regex = /^[а-яА-ЯёЁa-zA-Z]+$/
 
 let sign_in = document.querySelector('.sign_in')
 let sign_up = document.querySelector('.sign_up')
@@ -488,6 +494,7 @@ let profile = document.querySelector('.profile')
 
 let check_code = 12345
 let code_check_input = document.querySelector('.code_check')
+
 
 let number
 
@@ -563,7 +570,7 @@ function secondStep() {
 
 let user_input = document.querySelectorAll('.user_input')
 
-let names_regex = /^[a-z ,.'-]+$/i
+// let names_regex = /^[a-z ,.'-]+$/i
 
 
 profile_form.onsubmit = (e) => {

@@ -13,7 +13,130 @@
 
 <body>
 
+    <header></header>
 
+
+
+    <div class="profile_container">
+        <div class="container">
+            <div class="profile_info">
+                <h1>Мои данные</h1>
+
+                <form name="user">
+
+                    <div class="main_infos">
+                        <label>
+                            <h2>Фамилия</h2>
+                            <input type="text" name="surname" class="main_info_inputs surname_input">
+                        </label>
+                        <label>
+                            <h2>Имя</h2>
+                            <input type="text" name="name" class="main_info_inputs name_input">
+                        </label>
+                        <label>
+                            <h2>Отчество</h2>
+                            <input type="text" name="sur_name" class="main_info_inputs sur_name_input">
+                        </label>
+                    </div>
+                    <div class="other_infos main_infos">
+                        <label>
+                            <h2>Электронная почта</h2>
+                            <input type="email" name="email" class="main_info_inputs email_input"
+                                placeholder="example@mail.ru">
+                        </label>
+                        <label>
+                            <h2>Номер телефона</h2>
+                            <input type="text" name="phone" class="main_info_inputs number_input">
+                        </label>
+                    </div>
+
+
+                    <div class="buttons">
+                        <button class="quit" type="button">Выйти из системы</button>
+                        <button class="save" type="submit">Сохранить</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="registration_modal hidden_reg_modal">
+        <div class="bg"></div>
+        <div class="reg_content">
+            <button class="close">
+                <img src="/public/close.png" alt="">
+            </button>
+            <div class="sign_up">
+                <h1>Введите номер телефона</h1>
+                <p>Отправим смс с кодом подтверждения</p>
+                <form name="reg">
+                    <input type="tel" name="phone" placeholder="+998    00 000-00-00">
+                    <button class="send">Получить код</button>
+                </form>
+                <p class="rules">Авторизуясь, вы соглашаетесь c политикой <br> обработки персональных данных</p>
+            </div>
+
+
+            <div class="sign_in hidden_reg_modal">
+                <h1>Введите код</h1>
+                <p>Для подтверждения телефона отправили 5-значный код на <span class="reged_number"></span></p>
+                <input type="number" name="code" class="code_check send" placeholder="0     0     0     0     0">
+            </div>
+
+            <div class="profile hidden_reg_modal">
+                <h1>Заполните профиль</h1>
+                <form name="profile">
+                    <span>
+                        <input class="profile_inputs" type="text" name="name" placeholder="Ваше имя">
+                        <input class="profile_inputs" type="text" name="surname" placeholder="Ваша фамилия">
+                        <input type="tel" class="profile_inputs num_ready" name="phone" placeholder="+998 00 000 00 00">
+                    </span>
+                    <button class="send profile_btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="menu">
+        <div class="container">
+            <div class="nav_menu">
+                <div class="menu_main_page">
+                    <img src="/public/menu_main_page.svg" alt="">
+                    <p class="nav_link">Главная</p>
+                </div>
+                <div class="menu_catalog">
+                    <img src="/public/nav_menu_catalog.svg" alt="">
+                    <p class="nav_link">Каталог</p>
+                </div>
+                <div class="market">
+                    <img src="/public/market.svg" alt="">
+                    <p class="nav_link">Корзина</p>
+                    <span class="products_in_cart">13</span>
+                </div>
+                <div class="nav_menu_loved">
+                    <img src="/public/menu_loved.svg" alt="">
+                    <p class="nav_link">Избранное </p>
+                </div>
+                <div class="menu_profile">
+                    <img src="/public/menu_profile.svg" alt="">
+                    <p class="nav_link">Кабинет</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+
+    <script type="module" src="/modules/header.js"></script>
+    <script type="module" src="/modules/footer.js"></script>
     <script type="module" src="script.js"></script>
 </body>
 

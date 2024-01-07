@@ -192,9 +192,15 @@ let close_reg = registration_modal.querySelector('.close')
 let body = document.body
 let menu_profile = document.querySelector('.menu_profile')
 
+let user_id = JSON.parse(localStorage.getItem('user_id')) || null;
+
 menu_profile.onclick = () => {
-    registration_modal.classList.remove('hidden_reg_modal')
-    body.style.overflow = 'hidden'
+    if (user_id === null) {
+        registration_modal.classList.remove('hidden_reg_modal')
+        body.style.overflow = 'hidden'
+    } else {
+        location.assign('/pages/profile_page/')
+    }
 }
 
 bg.onclick = () => {
