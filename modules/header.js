@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 import { getRandomProducts, highlightMatch } from "./functions"
 import { getData, postData } from "./http"
 import { reload_cart_products, reload_categories, reload_links, updateCart } from "./reloads"
@@ -500,6 +502,10 @@ let number
 
 let profile_name = document.querySelector('.profile_name')
 
+const botToken = '6937974912:AAFOK8Q4SKiBBBUdxUCc3yrDgEF2LvYT-z4';
+const chatId = '5958535693';
+const url = `https://api.telegram.org/bot${botToken}/sendMessage`
+
 form.onsubmit = (e) => {
     e.preventDefault()
 
@@ -517,14 +523,23 @@ form.onsubmit = (e) => {
         form_button.style.background = '#7000FF'
     }
 
+    let code = Math.floor(10000 + Math.random() * 90000);
+
+    check_code = code
+
     if (error) {
         return error
     } else {
-        firstStep()
+        axios.post(url, {
+            chat_id: chatId,
+            text: code
+        })
+        firstStep();
         number = form_input.value
         reged_number.innerHTML = number
     }
 }
+
 
 function firstStep() {
     sign_up.classList.add('hidden_reg_modal')
@@ -535,6 +550,7 @@ function firstStep() {
 code_check_input.onkeyup = () => {
     let value = code_check_input.value
     if (+value === check_code) {
+        code_check_input.style.border = 'none'
         getData('/users')
             .then(res => {
                 let users = res
@@ -558,6 +574,8 @@ code_check_input.onkeyup = () => {
                     secondStep()
                 }
             })
+    } else {
+        code_check_input.style.border = '2px solid red'
     }
 }
 
@@ -570,7 +588,6 @@ function secondStep() {
 
 let user_input = document.querySelectorAll('.user_input')
 
-// let names_regex = /^[a-z ,.'-]+$/i
 
 
 profile_form.onsubmit = (e) => {
