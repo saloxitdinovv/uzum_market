@@ -65,7 +65,7 @@
 
 
     <div class="catalog_box">
-        
+
     </div>
 
 
@@ -183,6 +183,46 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="registration_modal hidden_reg_modal">
+        <div class="bg"></div>
+        <div class="reg_content">
+            <button class="close">
+                <img src="/public/close.png" alt="">
+            </button>
+            <div class="sign_up">
+                <h1>Введите номер телефона</h1>
+                <p>Отправим смс с кодом подтверждения</p>
+                <form name="reg">
+                    <input type="tel" name="phone" placeholder="+998    00 000-00-00">
+                    <button class="send">Получить код</button>
+                </form>
+                <p class="rules">Авторизуясь, вы соглашаетесь c политикой <br> обработки персональных данных</p>
+            </div>
+
+
+            <div class="sign_in hidden_reg_modal">
+                <h1>Введите код</h1>
+                <p>Для подтверждения телефона отправили 5-значный код на <span class="reged_number"></span></p>
+                <input type="number" name="code" class="code_check send" placeholder="0     0     0     0     0">
+            </div>
+
+            <div class="profile hidden_reg_modal">
+                <h1>Заполните профиль</h1>
+                <form name="profile">
+                    <span>
+                        <input class="profile_inputs" type="text" name="name" placeholder="Ваше имя">
+                        <input class="profile_inputs" type="text" name="surname" placeholder="Ваша фамилия">
+                        <input type="tel" class="profile_inputs num_ready" name="phone" placeholder="+998 00 000 00 00">
+                    </span>
+                    <button class="send profile_btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="script.js"></script>
 
     <script>

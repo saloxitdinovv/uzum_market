@@ -46,6 +46,35 @@ nav_menu_loved.onclick = () => {
 }
 
 
+let registration_modal = document.querySelector('.registration_modal')
+let bg = registration_modal.querySelector('.bg')
+let close_reg = registration_modal.querySelector('.close')
+let body = document.body
+let menu_profile = document.querySelector('.menu_profile')
+
+let user_id = JSON.parse(localStorage.getItem('user_id')) || null;
+
+menu_profile.onclick = () => {
+    if (user_id === null) {
+        registration_modal.classList.remove('hidden_reg_modal')
+        body.style.overflow = 'hidden'
+    } else {
+        location.assign('/pages/profile_page/')
+    }
+}
+
+bg.onclick = () => {
+    registration_modal.classList.add('hidden_reg_modal')
+    body.style.overflowY = 'scroll'
+}
+
+close_reg.onclick = () => {
+    registration_modal.classList.add('hidden_reg_modal')
+    body.style.overflowY = 'scroll'
+}
+
+
+
 let cart_main = JSON.parse(localStorage.getItem('cart')) || [];
 let uniqueCart = new Set(cart_main.map(JSON.stringify));
 let cart = Array.from(uniqueCart).map(JSON.parse);

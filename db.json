@@ -943,28 +943,5 @@
       "type": "kitchen"
     }
   ],
-  "users": [
-    {
-      "name": "Дониёр",
-      "surname": "Салохитдинов",
-      "phone": "+998979273579",
-      "id": 1,
-      "sur_name": "Зокирович",
-      "email": ""
-    },
-    {
-      "name": "ррараа",
-      "surname": "аоаоао",
-      "phone": "+998979373579",
-      "id": 2
-    },
-    {
-      "name": "Saloxitdinov",
-      "surname": "saloxitdinov",
-      "phone": "+998979273571",
-      "id": 3,
-      "sur_name": "Зокирович",
-      "email": "doniyoroffvv@gmail.com"
-    }
-  ]
+  "users": []
 }

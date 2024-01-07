@@ -1756,8 +1756,8 @@ body.modal-open {
 @media (max-width: 576px) {
 
     .buttons {
-    flex-direction: column;
-    gap: 30px;        
+        flex-direction: column-reverse;
+        gap: 30px;
     }
 
     .favourite_box {
