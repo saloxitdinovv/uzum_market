@@ -328,9 +328,3 @@ close_reg.onclick = () => {
     registration_modal.classList.add('hidden_reg_modal')
     body.style.overflowY = 'scroll'
 }
-
-
-const container = document.getElementById("myPanzoom");
-const options = { click: "toggleCover" };
-
-new Panzoom(container, options);

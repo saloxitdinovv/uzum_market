@@ -11,7 +11,8 @@ export default defineConfig({
         catalog_page: resolve(__dirname, 'pages/catalog_page/index.html'),
         category_page: resolve(__dirname, 'pages/category_page/index.html'),
         good_page: resolve(__dirname, 'pages/good_page/index.html'),
-        loved_page: resolve(__dirname, 'pages/loved_page/index.html')
+        loved_page: resolve(__dirname, 'pages/loved_page/index.html'),
+        profile_page: resolve(__dirname, 'pages/profile_page/index.html')
       },
     },
   },

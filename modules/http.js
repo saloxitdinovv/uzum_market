@@ -30,20 +30,6 @@ const analytics = getAnalytics(app);
 
 const database = getDatabase();
 
-
-// export const NewGetData = async (url) => {
-//     try {
-//         const dbRef = ref(database, url);
-//         const snapshot = await get(dbRef);
-//         return snapshot.val();
-//     } catch (error) {
-//         console.error('Error during GET request:', error);
-//         throw error;
-//     }
-// };
-
-
-
 let BASE_URL = import.meta.env.VITE_BASE_URL
 
 export let getData = async (url) => {
