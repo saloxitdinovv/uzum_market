@@ -191,6 +191,7 @@ function submit(user_key) {
 
     patchData('/users/' + user_key, user)
     localStorage.setItem('user_id', JSON.stringify(user.name))
+    console.log(user);
 }
 
 quit.onclick = () => {
