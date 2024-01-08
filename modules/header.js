@@ -590,9 +590,7 @@ let user_input = document.querySelectorAll('.user_input')
 
 
 
-profile_form.onsubmit = (e) => {
-    e.preventDefault()
-
+profile_form.onsubmit = () => {
     let error = false
 
     profile_inputs.forEach(input => {
