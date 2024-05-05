@@ -1,34 +1,31 @@
 import axios from 'axios'
 
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set, get, update, push } from "firebase/database";
-
+import { getDatabase, ref, set, get, update, push } from 'firebase/database';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCh8avpW8hE9M8iEBu85ZSq-4OFwm4NX0s",
-    authDomain: "uzum-9f885.firebaseapp.com",
-    databaseURL: "https://uzum-9f885-default-rtdb.firebaseio.com",
-    projectId: "uzum-9f885",
-    storageBucket: "uzum-9f885.appspot.com",
-    messagingSenderId: "453996588025",
-    appId: "1:453996588025:web:1af030113b117d080d6b28",
-    measurementId: "G-HD6RMDLGMX"
+    apiKey: "AIzaSyDRn3FyZ2MtVvQQexKkg1s_5XpSjWdwb_A",
+    authDomain: "uzum-market-d563c.firebaseapp.com",
+    projectId: "uzum-market-d563c",
+    storageBucket: "uzum-market-d563c.appspot.com",
+    messagingSenderId: "367475286555",
+    appId: "1:367475286555:web:a67d693c0ff4bf6e27cebe",
+    measurementId: "G-9LS961BH73"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-
-
 const database = getDatabase();
+
+console.log(database.get);
 
 let BASE_URL = import.meta.env.VITE_BASE_URL
 
